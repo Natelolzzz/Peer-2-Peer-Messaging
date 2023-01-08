@@ -43,3 +43,7 @@ class Server:
     def remove(self, client):
         client.close()
         self.clients.remove(client)
+
+server = Server('127.0.0.1', 12345)
+server_thread = threading.Thread(target=server.receive)
+server_thread.start()
