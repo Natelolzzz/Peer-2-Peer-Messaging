@@ -21,15 +21,11 @@ class Client:
             except:
                 continue
 
-server = Server('127.0.0.1', 12345)
-server_thread = threading.Thread(target=server.receive)
-server_thread.start()
-
 nickname = input('Choose a nickname: ')
 client = Client('127.0.0.1', 12345, nickname)
 client_thread = threading.Thread(target=client.receive)
 client_thread.start()
 
 while True:
-    message = input(>)
+    message = input(> )
     client.send(message.encode('utf-8'))
