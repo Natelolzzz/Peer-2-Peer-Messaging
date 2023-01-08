@@ -31,5 +31,5 @@ client_thread = threading.Thread(target=client.receive)
 client_thread.start()
 
 while True:
-    message = input()
+    message = input(>)
     client.send(message.encode('utf-8'))
