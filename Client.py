@@ -22,7 +22,8 @@ class Client:
                 continue
 
 nickname = input('Choose a nickname: ')
-client = Client('127.0.0.1', 12345, nickname)
+SA = input('Server query: ')
+client = Client('127.0.0.1', SA, nickname)
 client_thread = threading.Thread(target=client.receive)
 client_thread.start()
 
