@@ -44,6 +44,7 @@ class Server:
         client.close()
         self.clients.remove(client)
 
-server = Server('127.0.0.1', 12345)
+server_id = input("What ID? > ")
+server = Server('127.0.0.1', int(server_id))
 server_thread = threading.Thread(target=server.receive)
 server_thread.start()
