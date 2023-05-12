@@ -21,8 +21,8 @@ class Client:
             except:
                 continue
 
-nickname = input('Choose a nickname: ')
-SA = input('Server query: ')
+nickname = input('Choose a nickname > ')
+SA = input('Server adress > ')
 client = Client('127.0.0.1', int(SA), nickname)
 client_thread = threading.Thread(target=client.receive)
 client_thread.start()
